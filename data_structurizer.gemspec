@@ -6,11 +6,11 @@ Gem::Specification.new do |spec|
   spec.name = "data_structurizer"
   spec.version = DataStructurizer::VERSION
   spec.authors = ["Ravi Shankar Singhal"]
-  spec.email = ["ravi@dbspl.co.in"]
+  spec.email = ["ravi.singhal2308@gmail.com"]
 
-  spec.summary = "TODO: Write a short summary, because RubyGems requires one."
-  spec.description = "TODO: Write a longer description or delete this line."
-  spec.homepage = "TODO: Put your gem's website or public repo URL here."
+  spec.summary = "Smart CSV/XLSX -> JSON/Excel normalizer & exporter"
+  spec.description = "Reads CSV/XLSX files, detects messy headers (multi-row/merged), normalizes them and exports nested JSON + cleaned Excel files."
+  spec.homepage = "https://github.com/RaviShankarSinghal/data_structurizer"
   spec.required_ruby_version = ">= 2.6.0"
 
   spec.metadata["allowed_push_host"] = "TODO: Set to your gem server 'https://example.com'"
@@ -26,9 +26,18 @@ Gem::Specification.new do |spec|
       (File.expand_path(f) == __FILE__) || f.start_with?(*%w[bin/ test/ spec/ features/ .git .circleci appveyor])
     end
   end
+  spec.license = "MIT"
   spec.bindir = "exe"
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
+
+  spec.add_runtime_dependency "roo", ">= 2.8"
+  spec.add_runtime_dependency "caxlsx", ">= 3.0"
+  spec.add_runtime_dependency "thor", ">= 1.0"
+  spec.add_runtime_dependency "oj", ">= 3.0"
+
+  spec.add_development_dependency "rspec"
+  spec.add_development_dependency "rake"
 
   # Uncomment to register a new dependency of your gem
   # spec.add_dependency "example-gem", "~> 1.0"
