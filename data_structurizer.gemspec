@@ -32,7 +32,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_runtime_dependency "roo", ">= 2.8"
-  spec.add_runtime_dependency "caxlsx", ">= 3.0"
+  spec.add_runtime_dependency "caxlsx", ">= 3.0"  
   spec.add_runtime_dependency "thor", ">= 1.0"
   spec.add_runtime_dependency "oj", ">= 3.0"
 
